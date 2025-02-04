@@ -1,0 +1,162 @@
+/* Apply a gradient background to the body for a vibrant look */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(135deg, #ff9a9e, #85badf);  */
+    /* background: #000; */
+ background-image: url(bg4.avif);
+ background-repeat: no-repeat;
+ background-size: cover;
+    margin: 0;
+    overflow: hidden; 
+    animation: backgroundAnimation 10s ease infinite; 
+}
+
+/* Style for the user details container */
+#user-details {
+    background: linear-gradient(135deg, #ff9a9e, #85badf); 
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 360px;
+    text-align: center;
+    margin: 20px auto;
+    animation: formAnimation 0.6s ease-out;
+}
+.image{
+    width: 290px;
+    height: 260px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+/* Keyframes for the form container animation */
+@keyframes formAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Style for the form elements */
+#details-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #85badf;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: rgb(115, 115, 207);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+#game-container {
+    text-align: center;
+    background: #a9e7ed;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animation for the game container */
+@keyframes containerAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+#game-container {
+    animation: containerAnimation 0.6s ease-out;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    color: #333333;
+    background:  linear-gradient(135deg, #ff9a9e, #85badf);
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cell:hover {
+    background-color: #f6e4e4;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional pulse animation for active cell */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.cell:active {
+    animation: pulse 0.3s ease;
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+    background-color: #e0e0e0;
+    color: #bbb;
+    box-shadow: none;
+}
+
+
+button:active {
+    transform: translateY(1px);
+}
+
+#game-status {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
