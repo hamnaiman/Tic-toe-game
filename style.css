@@ -160,3 +160,139 @@ button:active {
     color: #333;
     font-weight: bold;
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .image {
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
+    }
+    #user-details, #game-container {
+        width: 90%;
+    }
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        gap: 8px;
+    }
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    #game-status {
+        font-size: 1.2rem;
+    }
+    #game-container {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .board {
+        grid-template-columns: repeat(3, 60px);
+        gap: 5px;
+    }
+    .cell {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+    #game-status {
+        font-size: 1rem;
+    }
+    label {
+        font-size: 1rem;
+    }
+    input[type="text"] {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    #game-container {
+        width: auto;
+    }
+}
+/* Responsive adjustments for game container and board */
+@media screen and (max-width: 1024px) {
+    #game-container {
+        width: auto;
+        padding: 20px;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 90px);
+        gap: 10px;
+    }
+
+    .cell {
+        width: 90px;
+        height: 90px;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #game-container {
+        width: auto;
+        padding: 15px;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 75px);
+        gap: 8px;
+    }
+
+    .cell {
+        width: 75px;
+        height: 75px;
+        font-size: 2rem;
+    }
+
+    #game-status {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #game-container {
+        width: auto;
+        padding: 10px;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 60px);
+        gap: 5px;
+    }
+
+    .cell {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    #game-status {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
